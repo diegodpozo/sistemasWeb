@@ -1,0 +1,95 @@
+/* ESTILOS GENERALES PARA EL SISTEMA DE LOGIN */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.contenedor {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.alerta {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.alerta-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alerta-exito {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.indicador-fortaleza {
+    height: 5px;
+    margin-top: 5px;
+    background-color: #eee;
+    border-radius: 2px;
+}
+
+.fortaleza-debil { background-color: #dc3545; width: 33%; }
+.fortaleza-media { background-color: #ffc107; width: 66%; }
+.fortaleza-fuerte { background-color: #28a745; width: 100%; }
+
+.enlace-secundario {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+}
