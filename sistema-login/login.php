@@ -78,8 +78,10 @@ include "includes/encabezado.php";
 
     <div class="grupo-formulario">
         <label for="clave">CONTRASEÑA:</label>
-        <input type="password" name="clave" id="clave" required>
-        <button type="button" id="mostrar-clave" style="margin-top: 5px; font-size: 12px; background: #6c757d;">MOSTRAR</button>
+        <div class="contenedor-password">
+            <input type="password" name="clave" id="clave" required>
+            <button type="button" id="mostrar-clave" class="boton-ojo">MOSTRAR</button>
+        </div>
     </div>
 
     <button type="submit">INGRESAR</button>

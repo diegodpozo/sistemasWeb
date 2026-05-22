@@ -35,12 +35,37 @@ label {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.contenedor-password {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-password input {
+    padding-right: 85px; /* ESPACIO PARA EL BOTON */
+}
+
+.boton-ojo {
+    position: absolute;
+    right: 5px;
+    width: auto;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #6c757d;
+    margin: 0;
+}
+
+.boton-ojo:hover {
+    background-color: #5a6268;
 }
 
 button {
