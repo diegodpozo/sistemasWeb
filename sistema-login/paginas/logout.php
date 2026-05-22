@@ -1,7 +1,7 @@
 <?php
 // CIERRE DE SESION SEGURO
 
-require_once "config/Seguridad.php";
+require_once "../config/Seguridad.php";
 
 Seguridad::IniciarSesionSegura();
 

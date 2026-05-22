@@ -3,7 +3,7 @@
 
 class BaseDeDatos {
     private $servidor = "localhost";
-    private $nombreBaseDatos = "login_seguro";
+    private $nombreBaseDatos = "esquema";
     private $usuario = "root";
     private $clave = "";
     public $conexion;

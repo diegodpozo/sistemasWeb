@@ -1,16 +1,16 @@
 <?php
 // CONTROLADOR Y VISTA PARA EL INICIO DE SESION
 
-require_once "config/BaseDeDatos.php";
-require_once "config/Seguridad.php";
-require_once "models/Usuario.php";
+require_once "../config/BaseDeDatos.php";
+require_once "../config/Seguridad.php";
+require_once "../models/Usuario.php";
 
 Seguridad::IniciarSesionSegura();
 Seguridad::EstablecerCabecerasSeguridad();
 
 // REDIRIGIR SI YA ESTA LOGUEADO
 if (isset($_SESSION['usuarioId'])) {
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit();
 }
 
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['usuarioId'] = $idUsuario;
                     $_SESSION['usuarioEmail'] = $email;
                     $usuario->LimpiarIntentos($email);
-                    header("Location: index.php");
+                    header("Location: ../index.php");
                     exit();
                 } else {
                     // LOGIN FALLIDO
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $tokenCsrf = Seguridad::GenerarTokenCsrf();
 
-include "includes/encabezado.php";
+include "../includes/encabezado.php";
 ?>
 
 <h2>INICIO DE SESION</h2>
@@ -84,9 +84,9 @@ include "includes/encabezado.php";
         </div>
     </div>
 
-    <button type="submit">INGRESAR</button>
+    <button type="submit" class="boton-negro">INGRESAR</button>
 </form>
 
 <a href="registro.php" class="enlace-secundario">¿NO TIENES CUENTA? REGISTRATE</a>
 
-<?php include "includes/pie.php"; ?>
+<?php include "../includes/pie.php"; ?>

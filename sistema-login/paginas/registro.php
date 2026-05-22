@@ -1,9 +1,9 @@
 <?php
 // CONTROLADOR Y VISTA PARA EL REGISTRO DE USUARIOS
 
-require_once "config/BaseDeDatos.php";
-require_once "config/Seguridad.php";
-require_once "models/Usuario.php";
+require_once "../config/BaseDeDatos.php";
+require_once "../config/Seguridad.php";
+require_once "../models/Usuario.php";
 
 Seguridad::IniciarSesionSegura();
 Seguridad::EstablecerCabecerasSeguridad();
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $tokenCsrf = Seguridad::GenerarTokenCsrf();
 
-include "includes/encabezado.php";
+include "../includes/encabezado.php";
 ?>
 
 <h2>REGISTRO</h2>
@@ -73,9 +73,9 @@ include "includes/encabezado.php";
         <div id="indicador-fortaleza" class="indicador-fortaleza"></div>
     </div>
 
-    <button type="submit">REGISTRARSE</button>
+    <button type="submit" class="boton-negro">REGISTRARSE</button>
 </form>
 
 <a href="login.php" class="enlace-secundario">¿YA TIENES CUENTA? INICIA SESION</a>
 
-<?php include "includes/pie.php"; ?>
+<?php include "../includes/pie.php"; ?>
